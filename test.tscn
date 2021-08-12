@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ball/ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://hit_ball_control/hit_ball_control.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 120.758, 24.8776 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 523.826, 24.8776 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 90.5
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 48.3, 44.7 )
+
+[node name="TestScene" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 211, 307 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 27.5, -92.5 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2( 145.351, 646.831 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2( 366.863, -24.4575 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( -52.8839, -54.714 )
+rotation = 1.5743
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2( 366.863, -24.4575 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2( 1033.55, 13.5097 )
+rotation = 1.5743
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2( 366.863, -24.4575 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2( 154.362, -1.93719 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( 366.863, -24.4575 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 445, 28.5 )
+rotation = -0.00101531
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -327.869, 363.167 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 590, 186.5 )
+rotation = 1.56162
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -84.8502, 255.732 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 477, 249.5 )
+rotation = 1.56162
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 166.485, -324.486 )
+shape = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 518.719, 328.899 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 228.219, 98.3988 )
+
+[node name="HitBallControl" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+enabled = true
+
+[connection signal="stopped_moving" from="Ball" to="HitBallControl" method="_on_ball_stopped_moving"]
