@@ -21,7 +21,7 @@ shape = SubResource( 1 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 1 )
 
-[node name="TrailLine" type="Line2D" parent="."]
+[node name="SmearLine" type="Line2D" parent="."]
 width = 8.0
 default_color = Color( 1, 1, 1, 1 )
 begin_cap_mode = 2
@@ -44,4 +44,4 @@ stream = ExtResource( 4 )
 
 [connection signal="bounced" from="." to="SoundEffects" method="_on_ball_bounced"]
 [connection signal="hit" from="." to="SoundEffects" method="_on_ball_hit"]
-[connection signal="moving" from="." to="TrailLine" method="_on_ball_moving"]
+[connection signal="moving" from="." to="SmearLine" method="_on_ball_moving"]
