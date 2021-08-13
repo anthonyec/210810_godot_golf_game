@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal stopped_moving
+signal moving(speed, direction)
 signal bounced(speed, direction, hit_normal)
 signal hit(power, direction)
 
@@ -18,6 +19,9 @@ func _process(delta):
 	if velocity_is_not_zero && velocity_under_stop_bias:
 		velocity = Vector2.ZERO
 		emit_signal("stopped_moving")
+	
+	if velocity_is_not_zero && !velocity_under_stop_bias:
+		emit_signal("moving", velocity.length(), velocity.normalized())
 		
 	var collision: KinematicCollision2D = move_and_collide(velocity)
 	
