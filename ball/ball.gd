@@ -2,9 +2,7 @@ extends KinematicBody2D
 
 signal stopped_moving
 signal bounced(speed, direction, hit_normal)
-
-# TODO: Rename hitted signal to hit
-signal hitted(power)
+signal hit(power, direction)
 
 export var friction: float = 0.98;
 export var bounce_reduction: float = 0.9;
@@ -33,4 +31,4 @@ func _process(delta):
 
 func hit(direction: Vector2, power: float):
 	velocity += direction * power
-	emit_signal("hitted", power)
+	emit_signal("hit", power, direction)
