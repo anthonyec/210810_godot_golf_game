@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bounce_medium.mp3-cc4bd7797f67db8e711edc2ccfdffeb5.mp3str"
+
+[deps]
+
+source_file="res://entities/ball/audio/bounce_medium.mp3"
+dest_files=[ "res://.import/bounce_medium.mp3-cc4bd7797f67db8e711edc2ccfdffeb5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

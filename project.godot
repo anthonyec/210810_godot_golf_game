@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="210810_godot_golf_game"
-run/main_scene="res://test_tile_map.tscn"
+run/main_scene="res://levels/test_tile_map/test_tile_map.tscn"
 config/icon="res://icon.png"
 
 [display]

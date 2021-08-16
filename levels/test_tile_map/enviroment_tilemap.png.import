@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ball_sprite.png-4d6e63f88cb48b6cac93b13599bbf945.stex"
+path="res://.import/enviroment_tilemap.png-b45be9488a516a37e7a1b79d52d5e88f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ball/sprites/ball_sprite.png"
-dest_files=[ "res://.import/ball_sprite.png-4d6e63f88cb48b6cac93b13599bbf945.stex" ]
+source_file="res://levels/test_tile_map/enviroment_tilemap.png"
+dest_files=[ "res://.import/enviroment_tilemap.png-b45be9488a516a37e7a1b79d52d5e88f.stex" ]
 
 [params]
 

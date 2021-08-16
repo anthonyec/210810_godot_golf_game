@@ -9,4 +9,3 @@ func _ready():
 
 func _on_ball_moving(speed, direction):
 	set_point_position(1, position - direction * speed * multipler)
-	pass

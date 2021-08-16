@@ -12,8 +12,6 @@ func _on_ball_hit(speed: float, direction: Vector2):
 	var hit_percent: float = speed / max_hit_power
 	ballHitSound.pitch_scale = lerp(1, 1.2, hit_percent)
 	ballHitSound.play()
-	
-	print("hit sound ", hit_percent)
 
 func _on_ball_bounced(power: float, direction: Vector2, hit_normal: Vector2):
 	var dot_product = direction.dot(hit_normal)
@@ -32,5 +30,3 @@ func _on_ball_bounced(power: float, direction: Vector2, hit_normal: Vector2):
 		bounceMedium.pitch_scale = lerp(1, 1.2, bounce_percent)
 		bounceMedium.volume_db = lerp(-20, 0, bounce_percent)
 		bounceMedium.play()
-	
-	print("bounced sound ", power, ", ", dot_product)

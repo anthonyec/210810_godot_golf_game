@@ -16,12 +16,12 @@ var direction: Vector2
 
 func _ready():
 	ball =  get_node(target_ball);
-	print(ball)
-
+	
 func _process(delta):
 	if Input.is_action_just_pressed("left_click"):
 		is_mouse_down = true
 		initial_mouse_position = get_viewport().get_mouse_position()
+		Engine.time_scale = 0.5
 
 	if Input.is_action_just_released("left_click"):
 		is_mouse_down = false
