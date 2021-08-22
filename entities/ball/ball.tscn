@@ -9,8 +9,8 @@
 [ext_resource path="res://entities/ball/ball_trail.gd" type="Script" id=7]
 [ext_resource path="res://entities/spawner/spawner.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entities/ball/ball_particles.gd" type="Script" id=9]
-[ext_resource path="res://particles/ball_hit_particles/ball_hit_particles.tscn" type="PackedScene" id=10]
-[ext_resource path="res://particles/ball_bounce_particles/ball_bounce_particles.tscn" type="PackedScene" id=11]
+[ext_resource path="res://particles/hit/hit.tscn" type="PackedScene" id=10]
+[ext_resource path="res://particles/bounce/bounce.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 5.0
